@@ -8,16 +8,35 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
+@available(iOS 10.0, *)
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+     let statusNotificationKey = "com.fall.status"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerForPushNotifications(application: application)
+  
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        UIApplication.shared.keyWindow?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         return true
+    }
+    
+    func registerForPushNotifications(application: UIApplication) {
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in }
+            application.registerForRemoteNotifications()
+        } else if #available(iOS 9.0, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        } else {
+            application.registerForRemoteNotifications(matching: [.badge, .sound, .alert])
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -43,6 +62,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("$$$$$$")
+        print(deviceTokenString)
+        print("$$$$$$")
+        Manager.deviceId = deviceTokenString
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
+        let data  = userInfo["aps"] as? [String : Any]
+
+        if let patient = data?["data"] as? [String : Any] {
+                       if (patient["id"] != nil && patient["status"] != nil) {
+                            //if (Manager.triggerNotifications == true) {
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: statusNotificationKey), object: nil, userInfo: patient)
+                            //}
+                            completionHandler(UIBackgroundFetchResult.newData);
+                       } else {
+                        completionHandler(UIBackgroundFetchResult.noData);
+                    }
+                   } else {
+                    
+                        completionHandler(UIBackgroundFetchResult.noData);
+                    }
+        
+    }
+    
+    
+    
+    
 
     // MARK: - Core Data stack
 

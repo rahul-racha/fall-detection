@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A158F5E0A8EBE3C203467DE /* Pods_fallDetection_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C00597A1AE17A39202D36D5 /* Pods_fallDetection_iOS.framework */; };
 		824BB96B203DD60F0066F2AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB96A203DD60F0066F2AB /* AppDelegate.swift */; };
 		824BB96D203DD60F0066F2AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB96C203DD60F0066F2AB /* ViewController.swift */; };
 		824BB970203DD60F0066F2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824BB96E203DD60F0066F2AB /* Main.storyboard */; };
@@ -15,6 +16,20 @@
 		824BB978203DD60F0066F2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824BB976203DD60F0066F2AB /* LaunchScreen.storyboard */; };
 		824BB983203DD60F0066F2AB /* fallDetection_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB982203DD60F0066F2AB /* fallDetection_iOSTests.swift */; };
 		824BB98E203DD60F0066F2AB /* fallDetection_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB98D203DD60F0066F2AB /* fallDetection_iOSUITests.swift */; };
+		824BB9A1203DD6530066F2AB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824BB99F203DD6530066F2AB /* Interface.storyboard */; };
+		824BB9A3203DD6530066F2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824BB9A2203DD6530066F2AB /* Assets.xcassets */; };
+		824BB9AA203DD6530066F2AB /* fallDetection-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 824BB9A9203DD6530066F2AB /* fallDetection-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		824BB9AF203DD6530066F2AB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB9AE203DD6530066F2AB /* InterfaceController.swift */; };
+		824BB9B1203DD6530066F2AB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB9B0203DD6530066F2AB /* ExtensionDelegate.swift */; };
+		824BB9B3203DD6530066F2AB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB9B2203DD6530066F2AB /* NotificationController.swift */; };
+		824BB9B5203DD6530066F2AB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB9B4203DD6530066F2AB /* ComplicationController.swift */; };
+		824BB9B7203DD6530066F2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824BB9B6203DD6530066F2AB /* Assets.xcassets */; };
+		824BB9BC203DD6530066F2AB /* fallDetection-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 824BB99D203DD6530066F2AB /* fallDetection-watchOS.app */; };
+		8282CE002044092A00621254 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282CDFF2044092A00621254 /* LoginViewController.swift */; };
+		8282CE0220440EB700621254 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282CE0120440EB700621254 /* global.swift */; };
+		8282CE0520447A2900621254 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282CE0420447A2900621254 /* PatientViewController.swift */; };
+		8282CE072044823800621254 /* alert_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8282CE062044823800621254 /* alert_sound.mp3 */; };
+		8282CE09204484A200621254 /* PatientTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282CE08204484A200621254 /* PatientTableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +47,49 @@
 			remoteGlobalIDString = 824BB966203DD60F0066F2AB;
 			remoteInfo = "fallDetection-iOS";
 		};
+		824BB9AB203DD6530066F2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824BB95F203DD60F0066F2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 824BB9A8203DD6530066F2AB;
+			remoteInfo = "fallDetection-watchOS Extension";
+		};
+		824BB9BA203DD6530066F2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824BB95F203DD60F0066F2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 824BB99C203DD6530066F2AB;
+			remoteInfo = "fallDetection-watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		824BB9C0203DD6530066F2AB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				824BB9AA203DD6530066F2AB /* fallDetection-watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		824BB9C4203DD6530066F2AB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				824BB9BC203DD6530066F2AB /* fallDetection-watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		759CAF06F6644558B8CBDB27 /* Pods-fallDetection-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fallDetection-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		824BB967203DD60F0066F2AB /* fallDetection-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fallDetection-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		824BB96A203DD60F0066F2AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824BB96C203DD60F0066F2AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +104,26 @@
 		824BB989203DD60F0066F2AB /* fallDetection-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fallDetection-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		824BB98D203DD60F0066F2AB /* fallDetection_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fallDetection_iOSUITests.swift; sourceTree = "<group>"; };
 		824BB98F203DD60F0066F2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824BB99D203DD6530066F2AB /* fallDetection-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fallDetection-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		824BB9A0203DD6530066F2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		824BB9A2203DD6530066F2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		824BB9A4203DD6530066F2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824BB9A9203DD6530066F2AB /* fallDetection-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "fallDetection-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		824BB9AE203DD6530066F2AB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		824BB9B0203DD6530066F2AB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		824BB9B2203DD6530066F2AB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		824BB9B4203DD6530066F2AB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		824BB9B6203DD6530066F2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		824BB9B8203DD6530066F2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824BB9B9203DD6530066F2AB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8282CDFF2044092A00621254 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8282CE0120440EB700621254 /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		8282CE0320440F2300621254 /* fallDetection-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fallDetection-iOS.entitlements"; sourceTree = "<group>"; };
+		8282CE0420447A2900621254 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		8282CE062044823800621254 /* alert_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert_sound.mp3; sourceTree = "<group>"; };
+		8282CE08204484A200621254 /* PatientTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableTableViewCell.swift; sourceTree = "<group>"; };
+		8A9781AB8C7CF728686356E8 /* Pods-fallDetection-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fallDetection-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8C00597A1AE17A39202D36D5 /* Pods_fallDetection_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fallDetection_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A158F5E0A8EBE3C203467DE /* Pods_fallDetection_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +149,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		824BB9A6203DD6530066F2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58EFAEC7B66D554A85345A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065F8D69F348ADC9D3057261 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A9781AB8C7CF728686356E8 /* Pods-fallDetection-iOS.debug.xcconfig */,
+				759CAF06F6644558B8CBDB27 /* Pods-fallDetection-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		652746CFDC5A67846B7A3BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C00597A1AE17A39202D36D5 /* Pods_fallDetection_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		824BB95E203DD60F0066F2AB = {
 			isa = PBXGroup;
 			children = (
 				824BB969203DD60F0066F2AB /* fallDetection-iOS */,
 				824BB981203DD60F0066F2AB /* fallDetection-iOSTests */,
 				824BB98C203DD60F0066F2AB /* fallDetection-iOSUITests */,
+				824BB99E203DD6530066F2AB /* fallDetection-watchOS */,
+				824BB9AD203DD6530066F2AB /* fallDetection-watchOS Extension */,
 				824BB968203DD60F0066F2AB /* Products */,
+				065F8D69F348ADC9D3057261 /* Pods */,
+				652746CFDC5A67846B7A3BD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +203,8 @@
 				824BB967203DD60F0066F2AB /* fallDetection-iOS.app */,
 				824BB97E203DD60F0066F2AB /* fallDetection-iOSTests.xctest */,
 				824BB989203DD60F0066F2AB /* fallDetection-iOSUITests.xctest */,
+				824BB99D203DD6530066F2AB /* fallDetection-watchOS.app */,
+				824BB9A9203DD6530066F2AB /* fallDetection-watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +212,8 @@
 		824BB969203DD60F0066F2AB /* fallDetection-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8282CE062044823800621254 /* alert_sound.mp3 */,
+				8282CE0320440F2300621254 /* fallDetection-iOS.entitlements */,
 				824BB96A203DD60F0066F2AB /* AppDelegate.swift */,
 				824BB96C203DD60F0066F2AB /* ViewController.swift */,
 				824BB96E203DD60F0066F2AB /* Main.storyboard */,
@@ -106,6 +221,10 @@
 				824BB976203DD60F0066F2AB /* LaunchScreen.storyboard */,
 				824BB979203DD60F0066F2AB /* Info.plist */,
 				824BB971203DD60F0066F2AB /* fallDetection_iOS.xcdatamodeld */,
+				8282CDFF2044092A00621254 /* LoginViewController.swift */,
+				8282CE0120440EB700621254 /* global.swift */,
+				8282CE0420447A2900621254 /* PatientViewController.swift */,
+				8282CE08204484A200621254 /* PatientTableTableViewCell.swift */,
 			);
 			path = "fallDetection-iOS";
 			sourceTree = "<group>";
@@ -128,6 +247,30 @@
 			path = "fallDetection-iOSUITests";
 			sourceTree = "<group>";
 		};
+		824BB99E203DD6530066F2AB /* fallDetection-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				824BB99F203DD6530066F2AB /* Interface.storyboard */,
+				824BB9A2203DD6530066F2AB /* Assets.xcassets */,
+				824BB9A4203DD6530066F2AB /* Info.plist */,
+			);
+			path = "fallDetection-watchOS";
+			sourceTree = "<group>";
+		};
+		824BB9AD203DD6530066F2AB /* fallDetection-watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				824BB9AE203DD6530066F2AB /* InterfaceController.swift */,
+				824BB9B0203DD6530066F2AB /* ExtensionDelegate.swift */,
+				824BB9B2203DD6530066F2AB /* NotificationController.swift */,
+				824BB9B4203DD6530066F2AB /* ComplicationController.swift */,
+				824BB9B6203DD6530066F2AB /* Assets.xcassets */,
+				824BB9B8203DD6530066F2AB /* Info.plist */,
+				824BB9B9203DD6530066F2AB /* PushNotificationPayload.apns */,
+			);
+			path = "fallDetection-watchOS Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,13 +278,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 824BB992203DD60F0066F2AB /* Build configuration list for PBXNativeTarget "fallDetection-iOS" */;
 			buildPhases = (
+				31B4637CC652080E967AAD7B /* [CP] Check Pods Manifest.lock */,
 				824BB963203DD60F0066F2AB /* Sources */,
 				824BB964203DD60F0066F2AB /* Frameworks */,
 				824BB965203DD60F0066F2AB /* Resources */,
+				824BB9C4203DD6530066F2AB /* Embed Watch Content */,
+				9D6C44A9B019F7A297CE6CD3 /* [CP] Embed Pods Frameworks */,
+				D9958D386AAFC925FDACF486 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				824BB9BB203DD6530066F2AB /* PBXTargetDependency */,
 			);
 			name = "fallDetection-iOS";
 			productName = "fallDetection-iOS";
@@ -184,6 +332,41 @@
 			productReference = 824BB989203DD60F0066F2AB /* fallDetection-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		824BB99C203DD6530066F2AB /* fallDetection-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 824BB9C1203DD6530066F2AB /* Build configuration list for PBXNativeTarget "fallDetection-watchOS" */;
+			buildPhases = (
+				824BB99B203DD6530066F2AB /* Resources */,
+				824BB9C0203DD6530066F2AB /* Embed App Extensions */,
+				CE58EFAEC7B66D554A85345A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				824BB9AC203DD6530066F2AB /* PBXTargetDependency */,
+			);
+			name = "fallDetection-watchOS";
+			productName = "fallDetection-watchOS";
+			productReference = 824BB99D203DD6530066F2AB /* fallDetection-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		824BB9A8203DD6530066F2AB /* fallDetection-watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 824BB9BD203DD6530066F2AB /* Build configuration list for PBXNativeTarget "fallDetection-watchOS Extension" */;
+			buildPhases = (
+				824BB9A5203DD6530066F2AB /* Sources */,
+				824BB9A6203DD6530066F2AB /* Frameworks */,
+				824BB9A7203DD6530066F2AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fallDetection-watchOS Extension";
+			productName = "fallDetection-watchOS Extension";
+			productReference = 824BB9A9203DD6530066F2AB /* fallDetection-watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +380,14 @@
 					824BB966203DD60F0066F2AB = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					824BB97D203DD60F0066F2AB = {
 						CreatedOnToolsVersion = 9.2;
@@ -207,6 +398,19 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 824BB966203DD60F0066F2AB;
+					};
+					824BB99C203DD6530066F2AB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					824BB9A8203DD6530066F2AB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -226,6 +430,8 @@
 				824BB966203DD60F0066F2AB /* fallDetection-iOS */,
 				824BB97D203DD60F0066F2AB /* fallDetection-iOSTests */,
 				824BB988203DD60F0066F2AB /* fallDetection-iOSUITests */,
+				824BB99C203DD6530066F2AB /* fallDetection-watchOS */,
+				824BB9A8203DD6530066F2AB /* fallDetection-watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				824BB978203DD60F0066F2AB /* LaunchScreen.storyboard in Resources */,
+				8282CE072044823800621254 /* alert_sound.mp3 in Resources */,
 				824BB975203DD60F0066F2AB /* Assets.xcassets in Resources */,
 				824BB970203DD60F0066F2AB /* Main.storyboard in Resources */,
 			);
@@ -255,16 +462,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		824BB99B203DD6530066F2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824BB9A3203DD6530066F2AB /* Assets.xcassets in Resources */,
+				824BB9A1203DD6530066F2AB /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		824BB9A7203DD6530066F2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824BB9B7203DD6530066F2AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31B4637CC652080E967AAD7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fallDetection-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D6C44A9B019F7A297CE6CD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9958D386AAFC925FDACF486 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		824BB963203DD60F0066F2AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8282CE002044092A00621254 /* LoginViewController.swift in Sources */,
 				824BB973203DD60F0066F2AB /* fallDetection_iOS.xcdatamodeld in Sources */,
+				8282CE0520447A2900621254 /* PatientViewController.swift in Sources */,
 				824BB96D203DD60F0066F2AB /* ViewController.swift in Sources */,
 				824BB96B203DD60F0066F2AB /* AppDelegate.swift in Sources */,
+				8282CE0220440EB700621254 /* global.swift in Sources */,
+				8282CE09204484A200621254 /* PatientTableTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +568,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		824BB9A5203DD6530066F2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824BB9B3203DD6530066F2AB /* NotificationController.swift in Sources */,
+				824BB9B5203DD6530066F2AB /* ComplicationController.swift in Sources */,
+				824BB9B1203DD6530066F2AB /* ExtensionDelegate.swift in Sources */,
+				824BB9AF203DD6530066F2AB /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +591,16 @@
 			isa = PBXTargetDependency;
 			target = 824BB966203DD60F0066F2AB /* fallDetection-iOS */;
 			targetProxy = 824BB98A203DD60F0066F2AB /* PBXContainerItemProxy */;
+		};
+		824BB9AC203DD6530066F2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 824BB9A8203DD6530066F2AB /* fallDetection-watchOS Extension */;
+			targetProxy = 824BB9AB203DD6530066F2AB /* PBXContainerItemProxy */;
+		};
+		824BB9BB203DD6530066F2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 824BB99C203DD6530066F2AB /* fallDetection-watchOS */;
+			targetProxy = 824BB9BA203DD6530066F2AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -314,6 +619,14 @@
 				824BB977203DD60F0066F2AB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		824BB99F203DD6530066F2AB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				824BB9A0203DD6530066F2AB /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -367,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -428,31 +741,37 @@
 		};
 		824BB993203DD60F0066F2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A9781AB8C7CF728686356E8 /* Pods-fallDetection-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fallDetection-iOS/fallDetection-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3BMC87S4X;
 				INFOPLIST_FILE = "fallDetection-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		824BB994203DD60F0066F2AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 759CAF06F6644558B8CBDB27 /* Pods-fallDetection-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fallDetection-iOS/fallDetection-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3BMC87S4X;
 				INFOPLIST_FILE = "fallDetection-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -522,6 +841,80 @@
 			};
 			name = Release;
 		};
+		824BB9BE203DD6530066F2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3BMC87S4X;
+				INFOPLIST_FILE = "fallDetection-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		824BB9BF203DD6530066F2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3BMC87S4X;
+				INFOPLIST_FILE = "fallDetection-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		824BB9C2203DD6530066F2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3BMC87S4X;
+				IBSC_MODULE = fallDetection_watchOS_Extension;
+				INFOPLIST_FILE = "fallDetection-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		824BB9C3203DD6530066F2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3BMC87S4X;
+				IBSC_MODULE = fallDetection_watchOS_Extension;
+				INFOPLIST_FILE = "fallDetection-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Handson.watchFallDetection.fallDetection-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +950,24 @@
 			buildConfigurations = (
 				824BB999203DD60F0066F2AB /* Debug */,
 				824BB99A203DD60F0066F2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		824BB9BD203DD6530066F2AB /* Build configuration list for PBXNativeTarget "fallDetection-watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824BB9BE203DD6530066F2AB /* Debug */,
+				824BB9BF203DD6530066F2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		824BB9C1203DD6530066F2AB /* Build configuration list for PBXNativeTarget "fallDetection-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824BB9C2203DD6530066F2AB /* Debug */,
+				824BB9C3203DD6530066F2AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

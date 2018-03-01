@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.6.0)
+  - SwiftKeychainWrapper (3.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - SwiftKeychainWrapper (from `https://github.com/jrendel/SwiftKeychainWrapper.git`)
+
+EXTERNAL SOURCES:
+  SwiftKeychainWrapper:
+    :git: https://github.com/jrendel/SwiftKeychainWrapper.git
+
+CHECKOUT OPTIONS:
+  SwiftKeychainWrapper:
+    :commit: 77f73c354d695d976bcf1437fc9fbcea981aa2b4
+    :git: https://github.com/jrendel/SwiftKeychainWrapper.git
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  SwiftKeychainWrapper: fe63ac0e19acd227aa031043de5a8f88a3ff23da
+
+PODFILE CHECKSUM: 244f9081307e7a405bd3df5c50395044d055baf9
+
+COCOAPODS: 1.3.1
