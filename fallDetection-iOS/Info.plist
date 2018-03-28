@@ -37,11 +37,12 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Device needs to turn location for altitude measurements</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Device needs to turn location for altitude measurements</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

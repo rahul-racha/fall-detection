@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 import Alamofire
+import WatchConnectivity
 
-class PatientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PatientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WCSessionDelegate {
     
     @IBOutlet weak var patientTableView: UITableView!
     @IBOutlet weak var btnStop: UIButton!
@@ -18,6 +19,20 @@ class PatientViewController: UIViewController, UITableViewDelegate, UITableViewD
     var bombSoundEffect: AVAudioPlayer?
     var alertCell = [PatientTableTableViewCell]()
     var flag: Bool?
+    var wcSession: WCSession!
+    
+    @available(iOS 9.3, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +53,10 @@ class PatientViewController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                 }
         }
+        
+        self.wcSession = WCSession.default
+        self.wcSession.delegate = self
+        wcSession.activate()
     }
 
     func displayAlertMessage(title: String, message: String) {
@@ -82,7 +101,29 @@ class PatientViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.handleFall()
     }
     
+    func sendMessage(msg: String) {
+        let msg = ["message": msg]
+        self.wcSession.sendMessage(msg, replyHandler: nil, errorHandler: {
+            error in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if (self.flag == false && message["message"] as! String == "stop") {
+            DispatchQueue.main.async {
+                self.bombSoundEffect?.stop()
+                self.flag = true
+                self.btnStop.isHidden = true
+                for cell in self.alertCell {
+                    cell.backgroundColor = UIColor.white
+                }
+            }
+        }
+    }
+    
     func handleFall() {
+        self.sendMessage(msg: "Patient needs help!")
         self.btnStop.isHidden = false
         self.flag = false
         //self.view.backgroundColor = UIColor.red
@@ -99,13 +140,13 @@ class PatientViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func stopAction(_ sender: UIButton) {
-    self.bombSoundEffect?.stop()
-    self.flag = true
-    self.btnStop.isHidden = true
+        self.bombSoundEffect?.stop()
+        self.flag = true
+        self.btnStop.isHidden = true
         for cell in self.alertCell {
             cell.backgroundColor = UIColor.white
         }
-    //self.view.backgroundColor = UIColor.white
+        self.sendMessage(msg: "Normal")
 }
 
 }

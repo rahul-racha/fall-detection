@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.4655091"
+            timestampString = "543963199.430918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "willActivate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.465551"
+            timestampString = "543963199.431102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "willActivate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.465591"
+            timestampString = "543963199.431159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "switchDidChange(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.465631"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "locationManager(manager:didUpdateToLocation:fromLocation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,29 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.46567"
+            timestampString = "543963199.431218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "switchDidChange(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "fallDetection-watchOS Extension/InterfaceController.swift"
-            timestampString = "541569752.465709"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "switchDidChange(_:)"
-            landmarkType = "7">
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "InterfaceController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

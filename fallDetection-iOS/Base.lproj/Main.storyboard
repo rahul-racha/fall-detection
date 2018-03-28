@@ -56,12 +56,27 @@
                                     <action selector="switchDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="hlf-Td-CaS"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altitude :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGh-QW-h6L">
+                                <rect key="frame" x="64" y="515" width="130" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ror-Wv-KFO">
+                                <rect key="frame" x="202" y="515" width="126" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="ufo-Q1-XCf" id="i9D-Bq-bYv"/>
+                        <outlet property="altLabel" destination="ror-Wv-KFO" id="Wb4-bb-sdb"/>
                         <outlet property="btnStop" destination="4f5-0j-qnx" id="zwO-sv-cr3"/>
                         <outlet property="magLabel" destination="uPk-BM-Mnb" id="MPe-ZM-m00"/>
                         <outlet property="switchManager" destination="Vyq-eS-Dqj" id="F55-a6-b6X"/>
@@ -122,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w25-I7-QY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.60000000000002" y="117.39130434782609"/>
+            <point key="canvasLocation" x="-638" y="118"/>
         </scene>
         <!--Patient View Controller-->
         <scene sceneID="jb4-07-rr6">
@@ -193,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gR-aj-E1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592.8" y="130.88455772113943"/>
+            <point key="canvasLocation" x="761" y="118"/>
         </scene>
     </scenes>
 </document>

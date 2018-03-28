@@ -10,20 +10,34 @@ import WatchKit
 import Foundation
 import CoreMotion
 import CoreLocation
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    @available(watchOSApplicationExtension 2.2, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //
+    }
+    
 
     @IBOutlet var altimeterSwitch: WKInterfaceSwitch!
     @IBOutlet var altLabel: WKInterfaceLabel!
+    @IBOutlet var stopBtn: WKInterfaceButton!
     
     var altimeter = CMAltimeter()
     var locationManager:CLLocationManager = CLLocationManager()
     let motionManager = CMMotionManager()
+    var wcSession: WCSession!
+    var player: WKAudioFilePlayer!
+    var statusObserver: NSKeyValueObservation?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
+        //self.stopBtn.setHidden(true)
+        self.wcSession = WCSession.default
+        self.wcSession.delegate = self
+        wcSession.activate()
     }
     
     override func willActivate() {
@@ -33,6 +47,7 @@ class InterfaceController: WKInterfaceController {
         self.locationManager.delegate = self as? CLLocationManagerDelegate
         self.locationManager.distanceFilter = kCLDistanceFilterNone
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
     }
     
     override func didDeactivate() {
@@ -162,21 +177,62 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
-    @IBAction func switchDidChange(_ value: Bool) {
-        if (value == true) {
-            self.startDeviceMotion()
-//            if #available(watchOSApplicationExtension 3.0, *) {
-//                self.locationManager.startUpdatingLocation()
-//            } else {
-//                // Fallback on earlier versions
-//            }
-            //self.startAltimeter()
-        } else {
-            self.motionManager.stopDeviceMotionUpdates()
-            //self.locationManager.stopUpdatingLocation()
-            //self.stopAltimeter()
+    func playSound() {
+        let myBundle = Bundle.main
+        if let audioURL = myBundle.url(forResource: "alert_sound", withExtension: "mp3") {
+            //self.movie.setMovieURL(audioURL)
+            let asset = WKAudioFileAsset(url: audioURL)
+            let item = WKAudioFilePlayerItem(asset: asset)
+            self.player = WKAudioFilePlayer(playerItem: item)
+            self.player.play()
         }
-        
     }
+    
+    func sendMessage(msg: String) {
+        let msg = ["message": msg]
+        self.wcSession.sendMessage(msg, replyHandler: nil, errorHandler: {
+            error in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        let txt = message["message"] as! String
+        self.altLabel.setText(txt)
+        if (txt != "Normal" && txt != "Unknown") {
+            self.stopBtn.setHidden(false)
+            self.playSound()
+        } else {
+            self.stopBtn.setHidden(true)
+            self.player.pause()
+        }
+    }
+    
+    @IBAction func stopSound() {
+        self.stopBtn.setHidden(true)
+        self.player.pause()
+        self.altLabel.setText("Normal")
+        self.sendMessage(msg: "stop")
+    }
+    
+    
+    
+    
+//    @IBAction func switchDidChange(_ value: Bool) {
+//        if (value == true) {
+//            self.startDeviceMotion()
+////            if #available(watchOSApplicationExtension 3.0, *) {
+////                self.locationManager.startUpdatingLocation()
+////            } else {
+////                // Fallback on earlier versions
+////            }
+//            //self.startAltimeter()
+//        } else {
+//            self.motionManager.stopDeviceMotionUpdates()
+//            //self.locationManager.stopUpdatingLocation()
+//            //self.stopAltimeter()
+//        }
+//
+//    }
 
 }

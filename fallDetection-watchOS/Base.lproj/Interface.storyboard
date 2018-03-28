@@ -14,19 +14,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="fallDetection_watchOS" customModuleProvider="target">
                     <items>
-                        <switch width="135" height="36" alignment="left" id="SaT-5a-RfZ">
-                            <connections>
-                                <action selector="switchDidChange:" destination="AgC-eL-Hgc" id="fC9-bq-tr4"/>
-                            </connections>
-                        </switch>
-                        <label width="136" height="22" alignment="left" text="Relative Altitude" id="KYL-tf-cCZ"/>
-                        <label width="136" height="22" alignment="left" text="3.5 meters" textAlignment="center" id="OpG-Tm-cfV">
+                        <switch width="135" height="36" alignment="left" id="SaT-5a-RfZ"/>
+                        <label width="136" height="22" alignment="left" text="Status" id="KYL-tf-cCZ">
+                            <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="136" height="22" alignment="left" text="Unknown" textAlignment="center" numberOfLines="0" id="OpG-Tm-cfV">
                             <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
+                        <button width="1" alignment="left" hidden="YES" title="Stop" id="v4W-Mk-0eV">
+                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="stopSound" destination="AgC-eL-Hgc" id="JYK-tC-4uT"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="altLabel" destination="OpG-Tm-cfV" id="Idi-AX-9dv"/>
                         <outlet property="altimeterSwitch" destination="SaT-5a-RfZ" id="93F-dp-k3p"/>
+                        <outlet property="stopBtn" destination="v4W-Mk-0eV" id="yGc-Lt-6ob"/>
                     </connections>
                 </controller>
             </objects>
