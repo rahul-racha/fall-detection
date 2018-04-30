@@ -34,6 +34,7 @@
 		82AA7DC8205C2716009BADE8 /* VectorMath+SceneKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA7DC5205C2715009BADE8 /* VectorMath+SceneKit.swift */; };
 		82AA7DC9205C2716009BADE8 /* VectorMath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA7DC6205C2716009BADE8 /* VectorMath+Quartz.swift */; };
 		82EDE826206A3C6A00CC6479 /* alert_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82EDE825206A3C6A00CC6479 /* alert_sound.mp3 */; };
+		82F8894E207535AA00F71899 /* QueueTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F8894D207535AA00F71899 /* QueueTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		82AA7DC6205C2716009BADE8 /* VectorMath+Quartz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VectorMath+Quartz.swift"; sourceTree = "<group>"; };
 		82EDE824206A288400CC6479 /* fallDetection-watchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fallDetection-watchOS Extension.entitlements"; sourceTree = "<group>"; };
 		82EDE825206A3C6A00CC6479 /* alert_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert_sound.mp3; sourceTree = "<group>"; };
+		82F8894D207535AA00F71899 /* QueueTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTemplate.swift; sourceTree = "<group>"; };
 		8A9781AB8C7CF728686356E8 /* Pods-fallDetection-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fallDetection-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fallDetection-iOS/Pods-fallDetection-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8C00597A1AE17A39202D36D5 /* Pods_fallDetection_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fallDetection_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 				8282CE0120440EB700621254 /* global.swift */,
 				8282CE0420447A2900621254 /* PatientViewController.swift */,
 				8282CE08204484A200621254 /* PatientTableTableViewCell.swift */,
+				82F8894D207535AA00F71899 /* QueueTemplate.swift */,
 			);
 			path = "fallDetection-iOS";
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				8282CE002044092A00621254 /* LoginViewController.swift in Sources */,
 				82AA7DC8205C2716009BADE8 /* VectorMath+SceneKit.swift in Sources */,
 				824BB973203DD60F0066F2AB /* fallDetection_iOS.xcdatamodeld in Sources */,
+				82F8894E207535AA00F71899 /* QueueTemplate.swift in Sources */,
 				8282CE0520447A2900621254 /* PatientViewController.swift in Sources */,
 				82AA7DC9205C2716009BADE8 /* VectorMath+Quartz.swift in Sources */,
 				824BB96D203DD60F0066F2AB /* ViewController.swift in Sources */,

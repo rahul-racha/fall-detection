@@ -39,6 +39,8 @@
 	</dict>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Device needs to turn location for altitude measurements</string>
+    <key>NSMotionUsageDescription</key>
+    <string>In order to count steps the app needs an access to your pedometer</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

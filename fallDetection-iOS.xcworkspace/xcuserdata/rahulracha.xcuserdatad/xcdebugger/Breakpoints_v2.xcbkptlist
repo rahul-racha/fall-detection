@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-iOS/PatientViewController.swift"
-            timestampString = "543963199.430662"
+            timestampString = "544554616.864421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkName = "catchStatusNotification(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-iOS/ViewController.swift"
-            timestampString = "543963199.431265"
+            timestampString = "545162338.532162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "session(_:didReceiveMessage:)"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "stopAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,13 +42,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fallDetection-iOS/ViewController.swift"
-            timestampString = "543963199.431699"
+            timestampString = "545162338.532465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "session(_:didReceiveMessage:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "stopAction(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fallDetection-iOS/ViewController.swift"
+            timestampString = "545162338.532712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
+            landmarkName = "startUpdating()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fallDetection-iOS/ViewController.swift"
+            timestampString = "545162338.5329159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "startCountingSteps()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "fallDetection_iOS.ViewController.startCountingSteps() -&gt; ()"
+                  moduleName = "fallDetection-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahulracha/Documents/Handson/iOS/fallDetection-iOS/fallDetection-iOS/ViewController.swift"
+                  timestampString = "545159660.844173"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "342"
+                  endingLineNumber = "342"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.CMPedometerData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in fallDetection_iOS.ViewController.startCountingSteps() -&gt; ()"
+                  moduleName = "fallDetection-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahulracha/Documents/Handson/iOS/fallDetection-iOS/fallDetection-iOS/ViewController.swift"
+                  timestampString = "545159660.845935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "343"
+                  endingLineNumber = "343"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
